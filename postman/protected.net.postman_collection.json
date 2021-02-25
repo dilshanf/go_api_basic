@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "c4214ff1-bac9-4cce-960c-29c6c4fdc312",
+		"name": "protected.net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"John\", \"lastName\": \"Smith\" ,  \"username\": \"jsmith\" ,   \"darkMode\": true }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/createUser",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateName",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"Johnsdsd\", \"lastName\": \"Sm2s2ith222\" , \"username\" : \"jsmith\"}"
+				},
+				"url": {
+					"raw": "{{base_url}}/updateName",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"updateName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toggleDarkMode",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\" : \"jsmith\"}"
+				},
+				"url": {
+					"raw": "{{base_url}}/toggleDarkMode",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"toggleDarkMode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base_url}}/listUsers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"listUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"searchString\" : \"jsmit112h\"}"
+				},
+				"url": {
+					"raw": "{{base_url}}/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "APIKey",
+						"value": "{{APIKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\" : \"jsmith\"}"
+				},
+				"url": {
+					"raw": "{{base_url}}/deleteUser",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "APIKey",
+			"value": "eyJpdiI6IktMMjRUZ0hBWVMwN1dLWVEzV"
+		}
+	]
+}
